@@ -12,20 +12,14 @@ const FullScreenSection = ({
     return (
         <VStack
     width="100%"
-    backgroundColor={boxProps.backgroundColor}
-    color={isDarkBackground ? "white" : "black"}
-    spacing={0}
+    maxWidth="1280px"
+    boxSizing="border-box"
+    px={{ base: 4, md: 8 }}
+    py={{ base: 4, md: 8 }}
+    gap={{ base: 4, md: 8 }}
+    {...boxProps}
 >
-    <VStack
-        width="100%"
-        maxWidth="1280px"
-        px={8}
-        py={8}
-        spacing={8}
-        {...boxProps}
-    >
-        {children}
-    </VStack>
+    {children}
 </VStack>
     );
 };

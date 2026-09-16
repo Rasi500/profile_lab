@@ -14,25 +14,32 @@ const LandingSection = () => (
         backgroundColor="#2A4365"
         minH="100vh"
     >
-        <VStack>
-            <Avatar.Root size="lg">
-                <Avatar.Image
-  src={`${process.env.PUBLIC_URL}/avatar.png`}
-  alt="Profile avatar"
-/>
-                <Avatar.Fallback name="Mark" />
-            </Avatar.Root>
-            <Heading as="h1">
-                {greeting}
-            </Heading>
+        <VStack
+    width="100%"
+    maxWidth="800px"
+    paddingX={{ base: 4, md: 8 }}
+    textAlign="center"
+>
+    <Avatar.Root size="lg">
+        <Avatar.Image
+            src={`${process.env.PUBLIC_URL}/avatar.png`}
+            alt="Profile avatar"
+        />
+        <Avatar.Fallback name="Mark" />
+    </Avatar.Root>
 
-            <Heading as="h2" size="xl">
-                {bio1}
-            </Heading>
+    <Heading as="h1">
+        {greeting}
+    </Heading>
 
-            <Heading as="h2" size="xl">
-                {bio2}
-            </Heading>        </VStack>
+    <Heading as="h2" size="xl">
+        {bio1}
+    </Heading>
+
+    <Heading as="h2" size="xl">
+        {bio2}
+    </Heading>
+</VStack>
     </FullScreenSection>
 );
 

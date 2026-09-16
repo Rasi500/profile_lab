@@ -45,7 +45,7 @@ const ProjectsSection = () => {
 
             <Box
                 display="grid"
-                gridTemplateColumns="repeat(2, minmax(0, 1fr))"
+                gridTemplateColumns={{ base: "1fr", md: "repeat(2, minmax(0, 1fr))" }}
                 gap={8}
                 width="100%"
             >

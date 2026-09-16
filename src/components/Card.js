@@ -14,17 +14,17 @@ const Card = ({ title, description, imageSrc }) => {
             spacing={0}
         >
             <Image
-    src={imageSrc}
-    alt={title}
-    width="100%"
-    height="260px"
-    objectFit="cover"
-/>
-            
+                src={imageSrc}
+                alt={title}
+                width="100%"
+                height={{ base: "180px", md: "260px" }}
+                objectFit="cover"
+            />
+
 
             <VStack
                 alignItems="flex-start"
-                padding={6}
+                padding={{ base: 4, md: 6 }}
                 gap={3}
                 width="100%"
             >
