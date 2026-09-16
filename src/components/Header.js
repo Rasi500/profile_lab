@@ -35,30 +35,29 @@ const socials = [
 const Header = () => {
     return (
         <Box
-            position="relative"
             width="100%"
             backgroundColor="#18181b"
             padding="1rem"
         >
             <HStack
+                width="100%"
                 maxWidth="1280px"
                 margin="0 auto"
                 justifyContent="space-between"
                 alignItems="center"
             >
-                {/* Name */}
-                <Link
-                    href="#"
-                    color="white"
-                    fontSize="1.5rem"
-                    fontWeight="bold"
-                    textDecoration="none"
-                >
-                    Mark
-                </Link>
+                {/* Mark + Social icons - LEFT */}
+                <HStack gap={{ base: 3, md: 5 }}>
+                    <Link
+    href="#home"
+    color="white"
+    fontSize={{ base: "1.3rem", md: "1.5rem" }}
+    fontWeight="bold"
+    textDecoration="none"
+>
+    Mark
+</Link>
 
-                {/* Social icons */}
-                <HStack gap={5}>
                     {socials.map((social) => (
                         <Link
                             key={social.url}
@@ -66,14 +65,30 @@ const Header = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             color="white"
-                            fontSize="1.3rem"
-                            _hover={{
-                                color: "gray.300",
-                            }}
+                            fontSize={{ base: "1rem", md: "1.3rem" }}
                         >
                             <FontAwesomeIcon icon={social.icon} />
                         </Link>
                     ))}
+                </HStack>
+
+                {/* Navigation - RIGHT */}
+                <HStack gap={{ base: 3, md: 6 }}>
+                    <Link
+                        href="#projects-section"
+                        color="white"
+                        fontSize={{ base: "0.75rem", md: "1rem" }}
+                    >
+                        Projects
+                    </Link>
+
+                    <Link
+                        href="#contactme-section"
+                        color="white"
+                        fontSize={{ base: "0.75rem", md: "1rem" }}
+                    >
+                        Contact Me
+                    </Link>
                 </HStack>
             </HStack>
         </Box>
