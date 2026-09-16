@@ -61,8 +61,9 @@ const LandingSection = () => {
             spacing={8}
         >
             <VStack
-                w="1024px"
-                p={32}
+                w="100%"
+                maxW="1024px"
+                p={{ base: 4, md: 8 }}
                 alignItems="flex-start"
             >
                 <Heading as="h1" id="contactme-section">
@@ -170,7 +171,7 @@ const LandingSection = () => {
                                 <Textarea
                                     id="comment"
                                     name="comment"
-                                    height="250px"
+                                    height={{ base: "180px", md: "250px" }}
                                     value={formik.values.comment}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
