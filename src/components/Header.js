@@ -54,7 +54,7 @@ const Header = () => {
                     fontWeight="bold"
                     textDecoration="none"
                 >
-                    Pete
+                    Mark
                 </Link>
 
                 {/* Social icons */}
