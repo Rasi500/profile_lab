@@ -1,6 +1,7 @@
 {
   "name": "profile_lab",
   "version": "0.1.0",
+  "homepage": "https://rasi500.github.io/profile_lab/",
   "private": true,
   "dependencies": {
     "@ark-ui/react": "^5.39.2",
