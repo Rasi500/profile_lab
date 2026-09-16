@@ -1,0 +1,39 @@
+
+> profile_lab@0.1.0 test
+> react-scripts test --watchAll=false
+
+FAIL src/App.test.js
+  ● Test suite failed to run
+
+    Cannot find module '@ark-ui/react/download-trigger' from 'node_modules/@chakra-ui/react/dist/cjs/components/download-trigger/index.cjs'
+
+    Require stack:
+      node_modules/@chakra-ui/react/dist/cjs/components/download-trigger/index.cjs
+      node_modules/@chakra-ui/react/dist/cjs/index.cjs
+      src/components/Header.js
+      src/App.js
+      src/App.test.js
+
+    [0m [90m 1 |[39m [36mimport[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mBox[39m[33m,[39m [33mHStack[39m[33m,[39m [33mLink[39m } [36mfrom[39m [32m"@chakra-ui/react"[39m[33m;[39m
+     [90m   |[39m [31m[1m^[22m[39m
+     [90m 3 |[39m [36mimport[39m { [33mFontAwesomeIcon[39m } [36mfrom[39m [32m"@fortawesome/react-fontawesome"[39m[33m;[39m
+     [90m 4 |[39m [36mimport[39m { faEnvelope } [36mfrom[39m [32m"@fortawesome/free-solid-svg-icons"[39m[33m;[39m
+     [90m 5 |[39m [36mimport[39m {[0m
+
+      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
+      at Object.<anonymous> (node_modules/@chakra-ui/react/dist/cjs/components/download-trigger/index.cjs:5:23)
+      at Object.<anonymous> (node_modules/@chakra-ui/react/dist/cjs/index.cjs:7:15)
+      at Object.<anonymous> (src/components/Header.js:2:1)
+      at Object.<anonymous> (src/App.js:1:1)
+      at Object.<anonymous> (src/App.test.js:2:1)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.266 s
+Ran all test suites.

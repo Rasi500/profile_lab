@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ark-ui/react": "^5.39.2",
     "@chakra-ui/react": "^3.37.0",
     "@emotion/react": "^11.14.0",
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "module-name-mapper": "^1.0.3"
   }
 }
