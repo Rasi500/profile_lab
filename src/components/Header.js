@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, HStack, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -33,6 +33,30 @@ const socials = [
 ];
 
 const Header = () => {
+    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY <= 0) {
+                setIsHeaderVisible(true);
+            } else if (currentScrollY > lastScrollY) {
+                setIsHeaderVisible(false);
+            } else {
+                setIsHeaderVisible(true);
+            }
+
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
         <Box
             width="100%"
@@ -41,6 +65,8 @@ const Header = () => {
             position="sticky"
             top="0"
             zIndex="1000"
+            transform={isHeaderVisible ? "translateY(0)" : "translateY(-100%)"}
+            transition="transform 0.3s ease-in-out"
         >
             <HStack
                 width="100%"
