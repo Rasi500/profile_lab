@@ -9,6 +9,7 @@ const bio2 = "specializing in building web applications with React and Node.js."
 const LandingSection = () => (
     <FullScreenSection
     id="home"
+    
         justifyContent="center"
         alignItems="center"
         isDarkBackground

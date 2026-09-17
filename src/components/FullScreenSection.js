@@ -18,14 +18,12 @@ const FullScreenSection = ({
     gap={0}
 >
     <VStack
-        width="100%"
-        maxWidth="1280px"
-        boxSizing="border-box"
-        px={{ base: 4, md: 8 }}
-        py={{ base: 4, md: 8 }}
-        gap={{ base: 4, md: 8 }}
-        alignItems="center"
-    >
+    id={boxProps.id}
+    width="100%"
+    backgroundColor={boxProps.backgroundColor}
+    color={isDarkBackground ? "white" : "black"}
+    gap={0}
+>
         {children}
     </VStack>
 </VStack>
