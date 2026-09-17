@@ -35,13 +35,13 @@ const socials = [
 const Header = () => {
     return (
         <Box
-    width="100%"
-    backgroundColor="#18181b"
-    padding="1rem"
-    position="sticky"
-    top="0"
-    zIndex="1000"
->
+            width="100%"
+            backgroundColor="#18181b"
+            padding="1rem"
+            position="sticky"
+            top="0"
+            zIndex="1000"
+        >
             <HStack
                 width="100%"
                 maxWidth="1280px"
@@ -51,22 +51,22 @@ const Header = () => {
             >
                 {/* Mark + Social icons - LEFT */}
                 <HStack gap={{ base: 3, md: 5 }}>
-   <Link
-    href="#home"
-    color="white"
-    fontSize={{ base: "1.3rem", md: "1.5rem" }}
-    fontWeight="bold"
-    textDecoration="none"
-    onClick={(event) => {
-        event.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    }}
->
-    Mark
-</Link>
+                    <Link
+                        href="#home"
+                        color="white"
+                        fontSize={{ base: "1.3rem", md: "1.5rem" }}
+                        fontWeight="bold"
+                        textDecoration="none"
+                        onClick={(event) => {
+                            event.preventDefault();
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            });
+                        }}
+                    >
+                        Mark
+                    </Link>
 
                     {socials.map((social) => (
                         <Link

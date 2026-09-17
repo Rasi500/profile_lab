@@ -39,10 +39,11 @@ const ProjectsSection = () => {
             alignItems="flex-start"
             spacing={8}
         >
-            <Heading
+     <Heading
     as="h1"
     id="projects-section"
     alignSelf="flex-start"
+    scrollMarginTop="100px"
 >
     Featured Projects
 </Heading>
